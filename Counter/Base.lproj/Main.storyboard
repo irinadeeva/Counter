@@ -68,12 +68,9 @@
                                     <action selector="substract:" destination="yTE-mQ-FU3" eventType="touchUpInside" id="SBT-Nk-EqM"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" text="История изменений:" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1bu-Kc-jmB">
-                                <rect key="frame" x="30" y="513" width="370" height="372"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="История изменений:" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1bu-Kc-jmB">
+                                <rect key="frame" x="30" y="513.33333333333337" width="370" height="374.66666666666663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="1bu-Kc-jmB" secondAttribute="height" multiplier="185:238" id="ORu-aY-g5m"/>
-                                </constraints>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -85,6 +82,7 @@
                             <constraint firstItem="otu-9g-ePZ" firstAttribute="trailing" secondItem="1bu-Kc-jmB" secondAttribute="trailing" constant="30" id="1uQ-4d-uEM"/>
                             <constraint firstItem="otu-9g-ePZ" firstAttribute="trailing" secondItem="5ee-CW-MDE" secondAttribute="trailing" constant="40" id="4wz-ML-eaY"/>
                             <constraint firstItem="1bu-Kc-jmB" firstAttribute="top" secondItem="5ee-CW-MDE" secondAttribute="bottom" constant="40" id="6kS-0f-PFG"/>
+                            <constraint firstItem="otu-9g-ePZ" firstAttribute="bottom" secondItem="1bu-Kc-jmB" secondAttribute="bottom" constant="10" id="Bn0-TZ-254"/>
                             <constraint firstItem="yHr-hG-Dak" firstAttribute="leading" secondItem="otu-9g-ePZ" secondAttribute="leading" constant="40" id="D46-29-aeU"/>
                             <constraint firstItem="Xun-ve-YCp" firstAttribute="top" secondItem="otu-9g-ePZ" secondAttribute="top" constant="20" id="J9V-pn-du9"/>
                             <constraint firstItem="1bu-Kc-jmB" firstAttribute="leading" secondItem="otu-9g-ePZ" secondAttribute="leading" constant="30" id="ab9-ul-Rbz"/>

@@ -9,23 +9,25 @@ import UIKit
 
 class ViewController: UIViewController {
     private var counter = 0
-    @IBOutlet weak var counterLabel: UILabel!
-    @IBOutlet weak var addButton: UIButton!
-    @IBOutlet weak var substractButton: UIButton!
-    @IBOutlet weak var restartButton: UIButton!
-    @IBOutlet weak var history: UITextView!
+    @IBOutlet private weak var counterLabel: UILabel!
+    @IBOutlet private weak var addButton: UIButton!
+    @IBOutlet private weak var substractButton: UIButton!
+    @IBOutlet private weak var restartButton: UIButton!
+    @IBOutlet private weak var history: UITextView!
+    @IBOutlet private weak var historyTableView: UITableView!
     
-    override func viewDidLoad() {
+    
+    override private func viewDidLoad() {
         super.viewDidLoad()
     }
 
-    @IBAction func add(_ sender: Any) {
+    @IBAction private func add(_ sender: Any) {
         counter += 1
         counterLabel.text = "\(counter)"
         history.text.append(contentsOf: "\n[\(Date().dateToString())]: значение изменено на +1")
     }
     
-    @IBAction func substract(_ sender: Any) {
+    @IBAction private func subtract(_ sender: Any) {
         if counter > 0 {
             counter -= 1
             counterLabel.text = "\(counter)"
@@ -36,7 +38,7 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func restart(_ sender: Any) {
+    @IBAction private func restart(_ sender: Any) {
         counter = 0
         counterLabel.text = "\(counter)"
         history.text.append(contentsOf: "\n[\(Date().dateToString())]: значение сброшено")

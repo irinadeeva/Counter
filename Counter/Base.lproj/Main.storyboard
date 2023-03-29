@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yTE-mQ-FU3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JVW-z1-wfI">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Counter-->
         <scene sceneID="SQw-GK-C4k">
             <objects>
                 <viewController id="yTE-mQ-FU3" customClass="ViewController" customModule="Counter" customModuleProvider="target" sceneMemberID="viewController">
@@ -26,7 +26,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </backgroundConfiguration>
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="50" scale="large"/>
-                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                    <color key="baseForegroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="add:" destination="yTE-mQ-FU3" eventType="touchUpInside" id="qq1-qb-9Xo"/>
@@ -62,7 +62,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="minus.circle" catalog="system" title="">
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="50"/>
-                                    <color key="baseForegroundColor" systemColor="linkColor"/>
+                                    <color key="baseForegroundColor" red="0.92941176889999999" green="0.25490197539999998" blue="0.14901961389999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="substract:" destination="yTE-mQ-FU3" eventType="touchUpInside" id="SBT-Nk-EqM"/>
@@ -99,6 +99,8 @@
                             <constraint firstItem="otu-9g-ePZ" firstAttribute="trailing" secondItem="Z6r-QE-fKi" secondAttribute="trailing" constant="20" id="swK-ug-sCq"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Counter" image="arrow.counterclockwise.circle.fill" catalog="system" id="K0r-nz-a7w"/>
+                    <navigationItem key="navigationItem" id="v2B-U5-0Lj"/>
                     <connections>
                         <outlet property="addButton" destination="5ee-CW-MDE" id="Dmb-DH-2JR"/>
                         <outlet property="counterLabel" destination="Z6r-QE-fKi" id="tZZ-eo-Et9"/>
@@ -109,25 +111,82 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hn9-qr-JJb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="587.44186046511629" y="-532.40343347639487"/>
+            <point key="canvasLocation" x="3283.2558139534885" y="-532.40343347639487"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="pbh-T1-U4t">
+            <objects>
+                <viewController id="IfP-1u-4Zt" customClass="ViewController" customModule="Counter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eHg-dW-uOc">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BGo-cG-Mg7">
+                                <rect key="frame" x="0.0" y="59" width="430" height="790"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="zsg-Y2-NmH">
+                                        <rect key="frame" x="0.0" y="50" width="430" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zsg-Y2-NmH" id="NfY-jQ-MfP">
+                                            <rect key="frame" x="0.0" y="0.0" width="430" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2cx-XY-RFS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2cx-XY-RFS" firstAttribute="bottom" secondItem="BGo-cG-Mg7" secondAttribute="bottom" id="ARm-YG-jHr"/>
+                            <constraint firstItem="BGo-cG-Mg7" firstAttribute="top" secondItem="2cx-XY-RFS" secondAttribute="top" id="feC-UY-Dx6"/>
+                            <constraint firstItem="2cx-XY-RFS" firstAttribute="trailing" secondItem="BGo-cG-Mg7" secondAttribute="trailing" id="gIB-FL-Wju"/>
+                            <constraint firstItem="BGo-cG-Mg7" firstAttribute="leading" secondItem="2cx-XY-RFS" secondAttribute="leading" id="grz-wZ-HCa"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Ji4-Nc-oY9"/>
+                    <connections>
+                        <outlet property="historyTableView" destination="BGo-cG-Mg7" id="KZS-xo-dbC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d0g-rv-wS1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3284" y="324"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ssq-S6-gRw">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="JVW-z1-wfI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JVz-ta-DjJ">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="yTE-mQ-FU3" kind="relationship" relationship="viewControllers" id="iMT-Zn-lQA"/>
+                        <segue destination="IfP-1u-4Zt" kind="relationship" relationship="viewControllers" id="jEg-vN-Cv9"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tB7-97-wCW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2364" y="-532"/>
         </scene>
     </scenes>
     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="arrow.clockwise" catalog="system" width="113" height="128"/>
+        <image name="arrow.counterclockwise.circle.fill" catalog="system" width="128" height="123"/>
         <image name="minus.circle" catalog="system" width="128" height="123"/>
         <image name="plus.circle" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
